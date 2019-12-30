@@ -33,7 +33,7 @@ async def on_ready():
     print('Logged in as '+client.user.name+' (ID:'+client.user.id+') | Connected to '+str(len(client.servers))+' servers | Connected to '+str(len(set(client.get_all_members())))+' users')
     print('--------')
     print('--------')
-    print('Started Dark BOT')
+    print('Started BENJIFR BOT')
     print('Created by Utkarsh')
     client.loop.create_task(status_task())
 
@@ -41,10 +41,10 @@ async def on_ready():
   
 	
 def is_owner(ctx):
-    return ctx.message.author.id == "420525168381657090, 395535610548322326"
+    return ctx.message.author.id == "458540015497117698"
 
-def is_dark(ctx):
-    return ctx.message.author.id == "420525168381657090"
+def is_benji(ctx):
+    return ctx.message.author.id == "583603658965647361"
 
 def is_shreyas(ctx):
     return ctx.message.author.id == "376602841625919488"
@@ -70,14 +70,14 @@ async def on_member_join(member):
     r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
     embed = discord.Embed(color = discord.Color((r << 16) + (g << 8) + b))
     embed.set_author(name='Welcome message')
-    embed.add_field(name = '__Welcome to Our Server__',value ='**Hope you will be active here. Check Our server rules and never try to break any rules. ',inline = False)
+    embed.add_field(name = '__Bienvene dans le serveur__',value ='**J'espère que vous serez actif ici. Merci d'aller voir les règles du serveur. ',inline = False)
     embed.set_image(url = 'https://media.giphy.com/media/OkJat1YNdoD3W/giphy.gif')
     await client.send_message(member,embed=embed)
     print("Sent message to " + member.name)
-    channel = discord.utils.get(client.get_all_channels(), server__name='DarkBot Official Server', name='darkbot-servers-join-leave-log')
+    channel = discord.utils.get(client.get_all_channels(), server__name='BENJIFR Serveur Officiel', name='benjifr-servers-join-leave-log')
     r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
     embed = discord.Embed(title=f'Welcome {member.name} to {member.server.name}', description='Do not forget to check <#474572305192845312> and never try to break any one of them', color = discord.Color((r << 16) + (g << 8) + b))
-    embed.add_field(name='__Thanks for joining__', value='**Hope you will be active here.**', inline=True)
+    embed.add_field(name='__Merci d'avoir rejoint__', value='**J'espère que vous serez actif ici.**', online=True)
     embed.add_field(name='Your join position is', value=member.joined_at)
     embed.set_image(url = 'https://media.giphy.com/media/OkJat1YNdoD3W/giphy.gif')
     embed.set_thumbnail(url=member.avatar_url)
