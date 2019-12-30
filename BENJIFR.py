@@ -77,7 +77,7 @@ async def on_member_join(member):
     channel = discord.utils.get(client.get_all_channels(), server__name='BENJIFR Serveur Officiel', name='benjifr-servers-join-leave-log')
     r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
     embed = discord.Embed(title=f'Welcome {member.name} to {member.server.name}', description='Do not forget to check <#474572305192845312> and never try to break any one of them', color = discord.Color((r << 16) + (g << 8) + b))
-    embed.add_field(name='__Merci d'avoir rejoint__', value='**J'espère que vous serez actif ici.**', online=True)
+    embed.add_field(name='__Merci d'avoir rejoint__', value='**J'espère que vous serez actif ici.**', inline =True)
     embed.add_field(name='Your join position is', value=member.joined_at)
     embed.set_image(url = 'https://media.giphy.com/media/OkJat1YNdoD3W/giphy.gif')
     embed.set_thumbnail(url=member.avatar_url)
