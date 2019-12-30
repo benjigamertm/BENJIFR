@@ -1,0 +1,10 @@
+const Discord = require('discord.js');
+const bot = new Discord.Client();
+
+bot.on('message' , (message) => {
+if(message.Constent == 'Hi'){
+	message.reply('Hello')
+}
+});
+
+bot.login('NTgzNjAzNjU4OTY1NjQ3MzYx.XfBHbA.ZhCGn3JzFcqbL7rmvU_mcsfg9zU');
